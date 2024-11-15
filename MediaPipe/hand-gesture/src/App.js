@@ -23,10 +23,11 @@ const App = () => {
       const vision = await FilesetResolver.forVisionTasks(
         "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/wasm"
       );
+      const online_model_path =
+        "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task";
       const recognizer = await GestureRecognizer.createFromOptions(vision, {
         baseOptions: {
-          modelAssetPath:
-            "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+          modelAssetPath: online_model_path,
           delegate: "GPU",
         },
         runningMode,
