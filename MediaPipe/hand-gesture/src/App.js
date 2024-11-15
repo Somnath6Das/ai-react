@@ -127,14 +127,11 @@ const App = () => {
 
   return (
     <div>
-      <h1>
-        Recognize hand gestures using the MediaPipe HandGestureRecognizer task
-      </h1>
+      
       <section>
-        <h2>Demo: Webcam continuous hand gesture detection</h2>
+        
         <p>
-          Use your hand to make gestures in front of the camera to get gesture
-          classification.
+          the model can understand 🤘✊👋☝️👎👍✌️ hand gestures 
         </p>
         {hasGetUserMedia() ? (
           <div>
